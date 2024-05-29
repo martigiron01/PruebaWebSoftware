@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <title>HORARI GLOBAL</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo"></div>
+            <div class="title">HORARI GLOBAL</div>
+            <div class="image" aria-label="Decorative image"></div>
+            <button class="menu-icon" aria-label="Menu Icon"></button>
+        </header>
+        <main class="main-content">
+            <h1 class="main-menu">Menú principal</h1>
+            <p class="option-select">Selecciona una opció</p>
+            <div class="option red" data-url="download.html">
+                <span>Descarregar horari</span>
+            </div>
+            <div class="option green" data-url="IA.html">
+                <span>Utilitzar IA per recomanacions</span>
+            </div>
+            <div class="option blue" data-url="seleccionar.html">
+                <span>Seleccionar matèries</span>
+            </div>
+            <div class="option purple" data-url="sincronitzar.html">
+                <span>Sincronitzar amb Google Calendar</span>
+            </div>
+            <div class="option dark" data-url="logout.html">
+                <span>Tancar sessió</span>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', () => {
+                window.location.href = option.getAttribute('data-url');
+            });
+        });
+    </script>
+</body>
+</html>
